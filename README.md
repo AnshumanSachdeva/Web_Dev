@@ -63,3 +63,10 @@
   4.4. Click on the edit button of DNS server assignment.
   4.5. By default it is set to Automatic (DHCP), change it to Manal.
   4.6. When selected Manual, two new options will come .i.e. IPv4 and IPv6, we have to turn on atleast one of them(I choosed IPv4).
+  <img width="743" height="964" alt="image" src="https://github.com/user-attachments/assets/cb8b3e8a-d71f-4341-bc78-23f19e2d23f3" />
+
+  4.7. Add your preferred DNS(Both Primary and Secondary).
+  <img width="721" height="958" alt="image" src="https://github.com/user-attachments/assets/cd2ea436-9fe8-4c5d-851b-0580bd862b33" />
+  4.8. Click on save and th DNS is changed.
+  <img width="816" height="258" alt="image" src="https://github.com/user-attachments/assets/34f445b9-f340-4c06-adcc-e49445e66fdb" />
+
