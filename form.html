@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        body{
+            font-size: 18px;
+        }
+
+        form , div{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid black;
+            margin: 20px 30px;
+            padding: 20px 20px;
+        }
+
+        button{
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <div>
+            <label for="">Please Enter Your Login details:</label>
+        <br>
+
+        <label for="name">Enter Name:</label>
+        <input type="text" id="name" placeholder="Enter Your Name here">
+        <br>
+
+        <label for="pwd">Enter Password:</label>
+        <input type="password" id="pwd" placeholder="Enter Your Password here">
+        </div>
+        
+        
+
+        <div>
+            <label for="gender">Please select your gender:</label>
+        <br>
+
+        <input type="radio" name="gender" id="male">
+        <label for="male"> Male</label>
+        <input type="radio" name="gender" id="Female">
+        <label for="male"> Female</label>
+        </div>
+        
+        
+
+        <div>
+            <label for="courses">Please Select Your Courses</label>
+        <br>
+        <input type="checkbox" name="courses" id="C++">
+        <label for="C++"> C++</label>
+        <br>
+        <input type="checkbox" name="courses" id="Web-Technology">
+        <label for="Web-Technology"> Web Technology</label>
+        <br>
+        <input type="checkbox" name="courses" id="Mathematics-III">
+        <label for="Mathematics-III"> Mathematics-III</label>
+        <br>
+        <input type="checkbox" name="courses" id="Digital-System-Design">
+        <label for="Digital-System-Design"> Digital System Design</label>
+        </div>
+
+        
+        <button>Submit</button>
+    </form>
+</body>
+</html>
