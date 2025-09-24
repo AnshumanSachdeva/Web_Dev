@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+    }
+
+    .CV {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      border: 2px solid black;
+      margin: 20px 30px;
+      padding: 20px 0;
+    }
+
+    .left-side {
+      text-align: justify;
+      width: 30%;
+      border-right: 2px solid black;
+      padding: 20px;
+      background-color: brown;
+      color: whitesmoke;
+    }
+
+    .right-side {
+      width: 70%;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    h1, h2, h3, h4 {
+      margin: 5px 0;
+    }
+
+    p {
+      text-align: justify;
+    }
+
+    ul, ol {
+      margin: 5px 0 5px 20px;
+    }
+
+    a {
+      text-decoration: none;
+      color: lightblue;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .buttons {
+      margin-top: 30px;
+      display: flex;
+      gap: 15px;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .btn-login {
+      background-color: blue;
+      color: white;
+    }
+
+    .btn-login:hover {
+      background-color: darkblue;
+    }
+
+    .btn-register {
+      background-color: darkgreen;
+      color: white;
+    }
+
+    .btn-register:hover {
+      background-color: green;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="CV">
+    
+    <div class="left-side">
+      <div class="contact">
+        <h4>Contact:</h4>
+        <ul>
+          <li id="mail">anshumansachdeva8@gmail.com</li>
+          <li id="phone">+91 9149877355</li>
+          <li><a href="www.linkedin.com/in/anshuman-sachdeva">(LinkedIn)</a></li>
+        </ul>
+      </div>
+
+      <div class="skills">
+        <h4>Top Skills:</h4>
+        <ol>
+          <li>Browser Developer Tools</li>
+          <li>UI/UX basics</li>
+          <li>Front-end Developer</li>
+          <li>Front-end Frameworks(React Learning)</li>
+        </ol>
+      </div>
+
+      <div class="Honor-Award">
+        <h4>Honor & Awards:</h4>
+        <ul>
+          <li>1st Prize - Tech Escape Room<br>(Tech Titans, NCEEI-TET 2025)</li>
+        </ul>
+      </div>
+    </div>
+
+    
+    <div class="right-side">
+      <div>
+        <div class="Header">
+          <h1>Anshuman Sachdeva</h1>
+          <h3>Front-End Developer | Web Enthusiast | AI Generalist | Building Interactive & Responsive Web Applications</h3>
+          <h4>Computer Science & Engineering Student at <a href="https://gcetj.ac.in/">GCET JAMMU</a></h4>
+          <p>Enthusiastic and dedicated Computer Science & Engineering student with a strong foundation in programming, web development, and problem-solving. Eager to apply my skills and knowledge to real-world projects and contribute to innovative solutions in the tech industry.</p>
+
+          <h2>Summary</h2>
+          <p>I’m a 2nd year Computer Science & Engineering student at GCET Jammu, passionate about building clean, responsive, and user-friendly web applications. With hands-on experience in HTML,CSS, and JavaScript through freelancing and personal projects— including developing a QR menu website for Ambrosia Juice & Shakes — I focus on turning ideas into functional, engaging digital experiences.<br><br>
+          Currently, I’m eager to explore front-end internships, sharpen my skills in React and Vue, and actively contribute to open-source projects. I also enjoy UI/UX design and optimizing web performance to create applications that not only look good but also run seamlessly.</p>
+        </div>
+
+        <div class="education">
+          <h2>Education:</h2>
+          <ul>
+            <li><strong>Govt. College of Engineering & Technology, Jammu</strong><br>Bachelor of Engineering in Computer Science & Engineering<br>2024 - 2028</li>
+            <li><strong>Oriental Academy, Jammu</strong><br>Senior Secondary Education (Class 12)<br>2023 - 2024<br>Percentage: 88.4%</li>
+            <li><strong>Model Academy, Jammu</strong><br>Secondary Education (Class 10)<br>2021 - 2022<br>Percentage: 93%</li>
+          </ul>
+        </div>
+
+        <div class="projects">
+          <h2>Projects:</h2>
+          <ul>
+            <li><strong>Weather App:</strong> Developed a responsive weather application using HTML, CSS, and JavaScript to showcase my projects and skills.</li>
+            <li><strong>To-Do List Application:</strong> Created a simple to-do list application using React.js that allows users to add, delete, and mark tasks as completed.</li>
+          </ul>
+        </div>
+
+        <div class="extracurricular-activities">
+          <h2>Extracurricular Activities:</h2>
+          <ul>
+            <li>Active member of the college coding club, participating in hackathons and coding competitions.</li>
+          </ul>
+        </div>
+
+        <div class="interests">
+          <h2>Interests:</h2>
+          <ul>
+            <li>Coding and Problem Solving</li>
+            <li>Web Development</li>
+            <li>AI</li>
+            <li>Technology Trends</li>
+            <li>Reading Tech Blogs</li>
+          </ul>
+        </div>
+      </div>
+
+      
+      <div class="buttons">
+        <a href="login.html"><button class="btn btn-login">Login</button></a>
+        <a href="register.html"><button class="btn btn-register">Register</button></a>
+        
+      </div>
+    </div>
+  </div>
+</body>
+</html>
