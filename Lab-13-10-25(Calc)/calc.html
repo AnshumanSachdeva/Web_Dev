@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: lightgray;
+        font-family: Arial, sans-serif;
+      }
+      .container {
+        width: 300px;
+        background-color: darkgray;
+        border-radius: 15px;
+        padding: 20px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+      }
+      #screen {
+        height: 60px;
+        background-color: black;
+        color: white;
+        border-radius: 5px;
+        padding: 10px;
+        font-size: 30px;
+        text-align: right;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+      }
+      .buttons {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 10px;
+        justify-content: center;
+      }
+      button {
+        height: 50px;
+        border-radius: 8px;
+        font-size: 18px;
+        cursor: pointer;
+      }
+      button:hover {
+        transform: scale(1.05);
+      }
+      .value {
+        background-color: dimgray;
+        color: white;
+      }
+      .value:hover {
+        background-color: gray;
+      }
+      .operation {
+        background-color: orange;
+        color: white;
+      }
+      .operation:hover {
+        background-color: darkorange;
+      }
+      #result {
+        background-color: red;
+        color: white;
+      }
+      #result:hover {
+        background-color: darkred;
+      }
+      #all-clear,
+      #backspace {
+        background-color: silver;
+        color: black;
+      }
+      #all-clear:hover,
+      #backspace:hover {
+        background-color: lightgray;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="screen">0</div>
+      <div class="buttons">
+        <button id="all-clear" class="utility">AC</button>
+        <button id="percentage" class="operation">%</button>
+        <button id="divide" class="operation">/</button>
+        <button id="backspace" class="utility">Del</button>
+
+        <button id="7" class="value">7</button>
+        <button id="8" class="value">8</button>
+        <button id="9" class="value">9</button>
+        <button id="multiply" class="operation">*</button>
+
+        <button id="4" class="value">4</button>
+        <button id="5" class="value">5</button>
+        <button id="6" class="value">6</button>
+        <button id="minus" class="operation">-</button>
+
+        <button id="1" class="value">1</button>
+        <button id="2" class="value">2</button>
+        <button id="3" class="value">3</button>
+        <button id="plus" class="operation">+</button>
+
+        <button id="00" class="value">00</button>
+        <button id="0" class="value">0</button>
+        <button id="point" class="value">.</button>
+        <button id="result" class="result">=</button>
+      </div>
+    </div>
+  </body>
+  <script>
+    alert(
+      "This is a simple calculator. Use the buttons to perform calculations."
+    );
+
+    const screen = document.getElementById("screen");
+    const buttons = document.querySelectorAll("button");
+
+    let currentInput = "0";
+
+    buttons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const value = btn.textContent;
+
+        if (value === "AC") {
+          currentInput = "0";
+        } else if (value === "Del") {
+          currentInput = currentInput.slice(0, -1) || "0";
+        } else if (value === "=") {
+          try {
+            currentInput = eval(currentInput).toString();
+          } catch {
+            currentInput = "Error";
+          }
+        } else {
+          if (currentInput === "0" && value !== "." && !isNaN(value)) {
+            currentInput = value;
+          } else {
+            currentInput += value;
+          }
+        }
+
+        screen.textContent = currentInput;
+      });
+    });
+  </script>
+</html>
