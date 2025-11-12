@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Growing & Shrinking text</title>
+    <style>
+      .text-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="text-container">Hello!</div>
+  </body>
+  <script>
+    let textContainer = document.querySelector(".text-container");
+    let size = 20;
+    let isGrowing = true;
+    function changer() {
+      if (isGrowing) {
+        size += 5;
+        textContainer.innerText = "Growing";
+        textContainer.style.color = "green";
+        if (size >= 200) {
+          isGrowing = false;
+        }
+      } else {
+        size -= 5;
+        textContainer.innerText = "Shrinking";
+        textContainer.style.color = "red";
+        if (size <= 20) {
+          isGrowing = true;
+        }
+      }
+      textContainer.style.fontSize = `${size}px`;
+    }
+    changer();
+    setInterval(changer, 100);
+  </script>
+</html>
