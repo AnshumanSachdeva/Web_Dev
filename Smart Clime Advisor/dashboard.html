@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SmartClime - Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css" />
+  </head>
+  <body>
+    <header class="dashboard-header">
+      <h1>🌤️ SmartClime Advisor</h1>
+      <p>Your Weather Intelligence Companion</p>
+    </header>
+
+    <main class="dashboard-main">
+      <section class="search-section">
+        <div class="search-container">
+          <input
+            type="text"
+            id="cityInput"
+            placeholder="Enter city name (Only Jammu available)"
+            value="Jammu"
+          />
+          <button id="searchBtn">Search Weather</button>
+        </div>
+        <div id="errorMessage" class="error-message"></div>
+      </section>
+
+      <!-- Current Weather -->
+      <section class="current-weather">
+        <div class="weather-card">
+          <h2 id="cityName">Jammu</h2>
+          <div class="weather-main">
+            <div class="temp">25°C</div>
+            <div class="condition">Sunny</div>
+            <div class="weather-icon">🌞</div>
+          </div>
+          <div class="weather-details">
+            <div>💧 Humidity: 65%</div>
+            <div>💨 Wind: 12 km/h</div>
+            <div>😊 Feels Like: 26°C</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7-Day Data -->
+      <section class="forecast-section">
+        <h3>7-Day Forecast - Jammu</h3>
+        <div class="forecast-cards">
+          <div class="forecast-day">
+            <div>Mon</div>
+            <div>🌞</div>
+            <div>25°C</div>
+          </div>
+          <div class="forecast-day">
+            <div>Tue</div>
+            <div>⛅</div>
+            <div>26°C</div>
+          </div>
+          <div class="forecast-day">
+            <div>Wed</div>
+            <div>🌧️</div>
+            <div>24°C</div>
+          </div>
+          <div class="forecast-day">
+            <div>Thu</div>
+            <div>🌞</div>
+            <div>27°C</div>
+          </div>
+          <div class="forecast-day">
+            <div>Fri</div>
+            <div>⛈️</div>
+            <div>23°C</div>
+          </div>
+          <div class="forecast-day">
+            <div>Sat</div>
+            <div>☁️</div>
+            <div>26°C</div>
+          </div>
+          <div class="forecast-day">
+            <div>Sun</div>
+            <div>🌞</div>
+            <div>28°C</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="suggestions-section">
+        <div class="tabs">
+          <input type="radio" name="tabs" id="tab1" checked />
+          <label for="tab1" class="tab-btn">👕 Outfit Suggestions</label>
+
+          <input type="radio" name="tabs" id="tab2" />
+          <label for="tab2" class="tab-btn">🧳 Travel Planning</label>
+
+          <input type="radio" name="tabs" id="tab3" />
+          <label for="tab3" class="tab-btn">🩺 Health Tips</label>
+
+          <input type="radio" name="tabs" id="tab4" />
+          <label for="tab4" class="tab-btn">💡 Local Tips</label>
+
+          <div class="tab-content">
+            <div class="tab-pane" id="content1">
+              <h4>Recommended Outfits for Jammu (25°C Sunny)</h4>
+              <ul>
+                <li>👕 Cotton T-shirt or light top</li>
+                <li>👖 Comfortable jeans or trousers</li>
+                <li>🕶️ Sunglasses for sun protection</li>
+                <li>👟 Comfortable walking shoes</li>
+                <li>🧢 Cap or hat for direct sunlight</li>
+              </ul>
+            </div>
+
+            <div class="tab-pane" id="content2">
+              <h4>Travel Planning Tips</h4>
+              <ul>
+                <li>
+                  🚗 Perfect weather for road trips and outdoor activities
+                </li>
+                <li>
+                  🌅 Best time for sightseeing: Morning (6-10 AM) & Evening (4-7
+                  PM)
+                </li>
+                <li>💧 Carry water bottle during day trips</li>
+                <li>⏰ Avoid peak sun hours: 12 PM - 3 PM</li>
+                <li>📱 Keep phone charged for navigation</li>
+              </ul>
+            </div>
+
+            <div class="tab-pane" id="content3">
+              <h4>Health Precautions</h4>
+              <ul>
+                <li>💧 Stay hydrated - drink 2-3 liters of water daily</li>
+                <li>🌞 Use sunscreen SPF 30+ every 2 hours</li>
+                <li>😎 Wear hat or cap when in direct sun</li>
+                <li>⏰ Take regular breaks in shaded areas</li>
+                <li>🍎 Eat light, fresh meals to maintain energy</li>
+              </ul>
+            </div>
+
+            <div class="tab-pane" id="content4">
+              <h4>Local Jammu Tips</h4>
+              <ul>
+                <li>
+                  🏞️ Perfect day for visiting Raghunath Temple and Bahu Fort
+                </li>
+                <li>🛍️ Evening hours best for shopping at Raghunath Bazaar</li>
+                <li>🍽️ Try local street food in cooler evening hours</li>
+                <li>
+                  📸 Great lighting conditions for photography throughout the
+                  day
+                </li>
+                <li>🚶 Ideal weather for walking tours in the city</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="action-buttons">
+        <button class="action-btn" id="localMode">🏠 Local Outing Plan</button>
+        <button class="action-btn" id="travelMode">✈️ Travel Planning</button>
+      </section>
+    </main>
+
+    <script src="dashboard.js"></script>
+  </body>
+</html>
