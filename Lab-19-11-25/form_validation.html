@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation</title>
+  </head>
+  <body>
+    <form action="index.php">
+      <div>
+        <label for="">Please Enter Your Login details:</label>
+        <br />
+
+        <label for="email">Enter Email:</label>
+
+        <input type="email" id="email" placeholder="Enter Your Email here" />
+        <div id="message"></div>
+        <br />
+
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+
+    <script>
+      let mail = document.querySelector("#email");
+      let msg = document.querySelector("#message");
+      mail.addEventListener("input", () => {
+        if (!mail.value.includes("@")) {
+          msg.innerText = "Please Enter Valid Mail Id.";
+          msg.style.fontSize = "12px";
+          msg.style.color = "red";
+        } else {
+          msg.innerText = "Email is correct You can Go further";
+          msg.style.fontSize = "12px";
+          msg.style.color = "green";
+          setTimeout(() => {
+            msg.innerText = "";
+          }, 2000);
+        }
+      });
+    </script>
+  </body>
+</html>

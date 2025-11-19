@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number and their Square & Cube Table</title>
+    <style>
+      #table,
+      tr,
+      td,
+      th {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      #table {
+        height: 100vh;
+        width: 100vw;
+      }
+      td {
+        font-size: larger;
+        text-align: center;
+        /* padding: 4px; */
+      }
+    </style>
+  </head>
+  <body>
+    <table id="table">
+      <tr>
+        <th>Number</th>
+        <th>Square</th>
+        <th>Cube</th>
+      </tr>
+    </table>
+    <script>
+      let table = document.querySelector("#table");
+      for (let i = 1; i < 21; i++) {
+        setTimeout(() => {
+          let newRow = document.createElement("tr");
+          let newCol1 = document.createElement("td");
+          let newCol2 = document.createElement("td");
+          let newCol3 = document.createElement("td");
+
+          newCol1.innerText = i;
+          newCol2.innerText = i ** 2;
+          newCol3.innerText = i ** 3;
+
+          newRow.appendChild(newCol1);
+          newRow.appendChild(newCol2);
+          newRow.appendChild(newCol3);
+          table.appendChild(newRow);
+        }, i * 1000);
+      }
+    </script>
+  </body>
+</html>
